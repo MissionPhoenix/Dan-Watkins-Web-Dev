@@ -1,0 +1,11 @@
+# ignore all the data folder
+data
+
+#ignore all of the wordpress folder except for my custom code
+!wordpress
+wordpress/*
+!wordpress/wp-content/
+wordpress/wp-content/*
+!wordpress/wp-content/themes/
+wordpress/wp-content/themes/*
+!wordpress/wp-content/themes/missionphoenix
