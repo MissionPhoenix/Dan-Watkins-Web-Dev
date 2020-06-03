@@ -1,10 +1,10 @@
-# /wordpress-docker/docker-compose.yml
+# /docker-compose.yml
 ---
-version: '3.3'
+version: '3.8'
 services:
   db:
     container_name: 'local-wordpress-db'
-    image: 'mysql:5.7'
+    image: 'mysql:latest'
     volumes:
       - './data/mysql:/var/lib/mysql'
     ports:
@@ -20,7 +20,7 @@ services:
       - db
     image: 'wordpress:latest'
     ports:
-      - '80:80'
+      - 80:80
     environment:
       WORDPRESS_DB_HOST: 'db:3306'
       WORDPRESS_DB_USER: wordpress_user
@@ -29,7 +29,7 @@ services:
     volumes:
       - "./wordpress:/var/www/html"
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: 'phpmyadmin/phpmyadmin'
     container_name: phpmyadmin
     depends_on:
       - db
@@ -41,5 +41,4 @@ services:
       - PMA_PASSWORD=wordpress_password
     ports:
       - 8080:80
-    volumes:
-      - /sessions
+
