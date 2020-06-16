@@ -17,7 +17,7 @@ body {
     border: $normal-border;
     }
 }
-@include media-screen(max, $mobile) {
+@include media(max, $mobile) {
   body {
     color: white;
   }

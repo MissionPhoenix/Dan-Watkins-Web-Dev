@@ -15,19 +15,42 @@ $frame-border: 5px ridge #8c8c8c;
 //Backgound image
 $manila-folder-1: '/wp-content/uploads/2020/06/tan-seamless-paper-textures-3-780x780-1.jpg';
 
-//Media queriy variables
-$mobile-smallest: 320px; // smartphones, iPhone, portrait 480x320 phones *
+//Media query variables
 $mobile-small:481px; // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
 $mobile: 641px; // portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 
 $tablet: 961px; // tablet, landscape iPad, lo-res laptops ands desktops 
 $laptop:1025px; // big landscape tablets, laptops, and desktops 
 $desktop:1281px; // hi-res laptops and desktops 
 
-
 // Mixins
-// Media query mixin
-@mixin media-screen($min-or-max, $screen-width) {
-    @media (#{$min-or-max}-width: $screen-width) {
+// Media query mixins
+@mixin mobile-small {
+    @media (max-width: $mobile-small) {
         @content;
     }
 } 
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+} 
+@mixin tablet {
+    @media (max-width: $tablet) {
+        @content;
+    }
+}
+@mixin tablet-large {
+    @media (max-width: $laptop) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (min-width: $laptop) and (max-width: $desktop) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
