@@ -2,6 +2,23 @@
 * Style sheet for Mission Phoenix Theme
 * Author Dan Watkins dan@kitson-consulting.co.uk
 */
+@import 'config';
+
 body {
-    background: orange;
+  background-image: url($manila-folder-1);
+  } 
+/* cards */
+.card {
+    #{&}-title {
+    color: $phoenix-red;
+    text-shadow: 1px 1px black;
+    }
+    #{&}-text {
+    border: $normal-border;
+    }
 }
+@include media-screen(max, $mobile) {
+  body {
+    color: white;
+  }
+} 

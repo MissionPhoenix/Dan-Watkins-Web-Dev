@@ -3,6 +3,22 @@
 * Author Dan Watkins dan@kitson-consulting.co.uk
 */
 body {
-  background: orange;
+  background-image: url("/wp-content/uploads/2020/06/tan-seamless-paper-textures-3-780x780-1.jpg");
+}
+
+/* cards */
+.card .card-title {
+  color: #b30000;
+  text-shadow: 1px 1px black;
+}
+
+.card .card-text {
+  border: 1px solid #8c8c8c;
+}
+
+@media (max-width: 641px) {
+  body {
+    color: white;
+  }
 }
 /*# sourceMappingURL=style.css.map */
