@@ -39,7 +39,7 @@ body {
 }
 
 /* Landscape style */
-@media (min-width: 1024px) {
+@media (orientation: landscape) {
   .header-container {
     max-width: 95vw;
     width: 95vw;

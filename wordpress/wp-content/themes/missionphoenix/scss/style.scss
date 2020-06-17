@@ -37,7 +37,7 @@ body {
   }
 }
 /* Landscape style */
-@include laptop {
+@media (orientation: landscape) {
   .header-container {
     max-width: 95vw;
     width: 95vw;
