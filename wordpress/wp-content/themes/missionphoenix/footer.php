@@ -2,7 +2,7 @@
 
 </body>
 <footer>
-    <div class="container">
+    <div class="container footer-container">
         <?php wp_nav_menu(
             
             array( 
