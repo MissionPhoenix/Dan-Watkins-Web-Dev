@@ -16,6 +16,8 @@ body {
 .header-container, .front-page, .pages, .posts-page, .post {
   border: $folder-border;
 }
+/* scrolling overflow */
+
 /* Portrait style */
 @media (orientation: portrait) {
   .header-container { 
