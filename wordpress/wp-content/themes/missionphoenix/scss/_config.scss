@@ -9,18 +9,20 @@ $phoenix-yellow: #ffd333;
 
 // Borders
 $normal-border: 1px solid #8c8c8c;
-$button-border: 5px outset #8c8c8c;
-$frame-border: 5px ridge #8c8c8c;
+$folder-border: 1px solid #663300;
+//$button-border: 5px outset #8c8c8c;
+//$frame-border: 5px ridge #8c8c8c;
 
-//Backgound image
+//Textures
+$polished-wood: '/wp-content/uploads/2020/06/polished-dark-wood.jpg';
 $manila-folder-1: '/wp-content/uploads/2020/06/tan-seamless-paper-textures-3-780x780-1.jpg';
 
 //Media query variables
-$mobile-small:481px; // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
-$mobile: 641px; // portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 
-$tablet: 961px; // tablet, landscape iPad, lo-res laptops ands desktops 
-$laptop:1025px; // big landscape tablets, laptops, and desktops 
-$desktop:1281px; // hi-res laptops and desktops 
+$mobile-small:480px; // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+$mobile: 640px; // portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 
+$tablet: 960px; // tablet, landscape iPad, lo-res laptops ands desktops 
+$laptop:1024px; // big landscape tablets, laptops, and desktops 
+$desktop:1280px; // hi-res laptops and desktops 
 
 // Mixins
 // Media query mixins
@@ -40,12 +42,12 @@ $desktop:1281px; // hi-res laptops and desktops
     }
 }
 @mixin tablet-large {
-    @media (max-width: $laptop) {
+    @media (max-width: $laptop - 1px) {
         @content;
     }
 }
 @mixin laptop {
-    @media (min-width: $laptop) and (max-width: $desktop) {
+    @media (min-width: $laptop) {
         @content;
     }
 }

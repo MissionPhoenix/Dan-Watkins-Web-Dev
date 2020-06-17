@@ -4,9 +4,79 @@
 */
 @import 'config';
 
+/* General Folder styles */
+/*Set Background images */
 body {
+  background-image: url($polished-wood);
+}
+.container {
   background-image: url($manila-folder-1);
-  } 
+}
+/* Border */
+.header-container, .front-page, .pages, .posts-page, .post {
+  border: $folder-border;
+}
+/* Portrait style */
+@media (orientation: portrait) {
+  .header-container { 
+    margin: 0 2vw 0 0;
+    width: 20vw;
+    float: right;
+    height: 96vh;
+    border-radius: 0 10px 10px 0;
+  }
+  .front-page, .pages, .posts-page, .post {
+    max-height: 96vh;
+    height: 96vh;
+    max-width: 78vw;
+    width: 78vw;   
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    margin: 2vh 0 2vh 2vw;
+  }
+}
+/* Landscape style */
+@include laptop {
+  .header-container {
+    max-width: 95vw;
+    width: 95vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    top: 2vh;
+  }
+  .navigation {
+    margin-bottom: 0;
+  }
+  ul.navigation {
+  display: flex;
+  height: 5rem;
+  // justify-items: center;
+    
+  // & li {
+  //   width: 100%;
+  //   height: 5rem;
+  //   font-size: 2em;
+  // }
+  }
+  .front-page, .pages, .posts-page, .post {
+    max-width: 95vw;
+    width: 95vw;
+    max-height: 80vh;
+    height: 80vh;
+    border: $folder-border;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+/* Nav Menu */
+ul.navigation {
+  list-style: none;
+  padding: 0;
+}
 /* cards */
 .card {
     #{&}-title {
@@ -17,8 +87,3 @@ body {
     border: $normal-border;
     }
 }
-@include media(max, $mobile) {
-  body {
-    color: white;
-  }
-} 

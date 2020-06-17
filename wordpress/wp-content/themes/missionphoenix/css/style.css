@@ -2,8 +2,76 @@
 * Style sheet for Mission Phoenix Theme
 * Author Dan Watkins dan@kitson-consulting.co.uk
 */
+/* General Folder styles */
+/*Set Background images */
 body {
+  background-image: url("/wp-content/uploads/2020/06/polished-dark-wood.jpg");
+}
+
+.container {
   background-image: url("/wp-content/uploads/2020/06/tan-seamless-paper-textures-3-780x780-1.jpg");
+}
+
+/* Border */
+.header-container, .front-page, .pages, .posts-page, .post {
+  border: 1px solid #663300;
+}
+
+/* Portrait style */
+@media (orientation: portrait) {
+  .header-container {
+    margin: 0 2vw 0 0;
+    width: 20vw;
+    float: right;
+    height: 96vh;
+    border-radius: 0 10px 10px 0;
+  }
+  .front-page, .pages, .posts-page, .post {
+    max-height: 96vh;
+    height: 96vh;
+    max-width: 78vw;
+    width: 78vw;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    margin: 2vh 0 2vh 2vw;
+  }
+}
+
+/* Landscape style */
+@media (min-width: 1024px) {
+  .header-container {
+    max-width: 95vw;
+    width: 95vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    top: 2vh;
+  }
+  .navigation {
+    margin-bottom: 0;
+  }
+  ul.navigation {
+    display: flex;
+    height: 5rem;
+  }
+  .front-page, .pages, .posts-page, .post {
+    max-width: 95vw;
+    width: 95vw;
+    max-height: 80vh;
+    height: 80vh;
+    border: 1px solid #663300;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* Nav Menu */
+ul.navigation {
+  list-style: none;
+  padding: 0;
 }
 
 /* cards */
@@ -14,11 +82,5 @@ body {
 
 .card .card-text {
   border: 1px solid #8c8c8c;
-}
-
-@media (max-width: 641px) {
-  body {
-    color: white;
-  }
 }
 /*# sourceMappingURL=style.css.map */
