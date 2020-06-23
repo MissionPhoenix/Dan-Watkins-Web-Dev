@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <div class="container post">
-    <div class="post-inner">
+    <div class="inner">
         <div class="paper-sheaf">
             <h1><?php the_title();?></h1>
 

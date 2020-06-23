@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <div class="container posts-page">
-    <div class="posts-page-inner">
+    <div class="inner">
         <div class="paper-sheaf">
             <h1><?php wp_title('');?></h1>
 
