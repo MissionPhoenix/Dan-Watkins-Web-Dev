@@ -2,20 +2,22 @@
 
 <div class="container post">
     <div class="inner">
-        <div class="paper-sheaf">
-            <h1><?php the_title();?></h1>
+        <div class="paper-stack">
+            <div class="paper-sheaf">
+                <h1><?php the_title();?></h1>
 
-            <?php if(has_post_thumbnail()):?>
+                <?php if(has_post_thumbnail()):?>
 
-                <img src="<?php the_post_thumbnail_url('biggest');?>" class="img-fluid"?>
+                    <img src="<?php the_post_thumbnail_url('biggest');?>" class="img-fluid"?>
 
-            <?php endif; ?>
-            <?php if( have_posts()) : while(have_posts()) : the_post();?>
+                <?php endif; ?>
+                <?php if( have_posts()) : while(have_posts()) : the_post();?>
 
-                <?php the_content();?>
+                    <?php the_content();?>
 
-            <?php endwhile; endif;// have_posts()?>
-        </div> 
+                <?php endwhile; endif;// have_posts()?>
+            </div> 
+        </div>
     </div>
 </div>
 
