@@ -2,52 +2,142 @@
 * Style sheet for Mission Phoenix Theme
 * Author Dan Watkins dan@kitson-consulting.co.uk
 */
-/* General Folder styles */
-/*Set Background images */
+/* Layout dimensions */
+/* 
+* ALL ORIENTATIONS 
+*/
+/* Folder and Desk */
 body {
   background-image: url("/wp-content/uploads/2020/06/polished-dark-wood.jpg");
 }
 
-.container {
+header .container, .front-page, .pages, .posts-page, .post {
   background-image: url("/wp-content/uploads/2020/06/tan-seamless-paper-textures-3-780x780-1.jpg");
-}
-
-/* Border */
-.header-container, .front-page, .pages, .posts-page, .post {
   border: 1px solid #663300;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
 }
 
-/* scrolling overflow */
-/* Portrait style */
+header .container {
+  z-index: -1;
+}
+
+/* FOLDER TABS AND CONTAINERS */
+/* profile page */
+.author .inner, .page-id-60 .inner {
+  background-color: #fff5ba;
+  border: 1px solid #ba9f00;
+}
+
+/* portfolio page */
+.page-id-233 .inner {
+  background-color: #ace7ff;
+  border: 1px solid #007aac;
+}
+
+/* posts page */
+.posts-page .inner, .post .inner {
+  background-color: #ffa07a;
+  border: 1px solid #7a2300;
+}
+
+/* contact page */
+.page-id-235 .inner {
+  background-color: #BFFCC6;
+  border: 1px solid #08b41c;
+}
+
+/* Inner layout */
+.inner {
+  position: relative;
+  overflow-y: hidden;
+}
+
+/* Paper-sheaf */
+.paper-sheaf {
+  background-image: url("/wp-content/uploads/2020/06/groovepaper.png");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  height: 95%;
+  margin: auto;
+  padding: 0 1rem;
+  border: 1px solid lightgrey;
+  position: relative;
+  z-index: 1;
+  transform: rotate(0.1deg);
+}
+
+.paper-sheaf:before, .paper-sheaf:after {
+  content: "";
+  position: absolute;
+  width: 94%;
+  height: 94%;
+  border: 1px solid lightgrey;
+  z-index: -1;
+}
+
+.paper-sheaf:before {
+  background: #fafafa;
+  width: 94%;
+  height: 94%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+
+.paper-sheaf:after {
+  background: #f6f6f6;
+  width: 94%;
+  height: 94%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+
+/* 
+* PORTRAIT STYLE 
+*/
 @media (orientation: portrait) {
-  .header-container {
-    margin: 0 2vw 0 0;
-    width: 20vw;
+  header .container {
+    margin: 0;
+    width: 14vw;
+    padding-left: 1.5vw;
     float: right;
     height: 96vh;
     border-radius: 0 10px 10px 0;
+    right: 2vw;
   }
   .front-page, .pages, .posts-page, .post {
     max-height: 96vh;
     height: 96vh;
-    max-width: 78vw;
-    width: 78vw;
+    max-width: 83vw;
+    width: 83vw;
     border-radius: 10px;
-    position: relative;
-    z-index: 2;
     margin: 2vh 0 2vh 2vw;
+  }
+  .inner {
+    max-height: 92vh;
+    height: 92vh;
+    max-width: 83vw;
+    width: 83vw;
+    border-width: 1px 0px 1px 1px !important;
+    margin: 2vh 0;
+    padding: 1vh 1vh 1vh 0.5vh;
   }
 }
 
-/* Landscape style */
+/* 
+LANDSCAPE STYLE 
+*/
 @media (orientation: landscape) {
-  .header-container {
-    max-width: 95vw;
-    width: 95vw;
-    margin-top: 2vh;
+  header .container {
+    max-width: 97vw;
+    width: 97vw;
+    margin-top: 0vh;
     border-radius: 10px;
-    position: relative;
-    z-index: 1;
     top: 2vh;
   }
   .navigation {
@@ -58,14 +148,22 @@ body {
     height: 5rem;
   }
   .front-page, .pages, .posts-page, .post {
-    max-width: 95vw;
-    width: 95vw;
-    max-height: 80vh;
-    height: 80vh;
+    max-width: 97vw;
+    width: 97vw;
+    max-height: 90vh;
+    height: 90vh;
     border: 1px solid #663300;
     border-radius: 10px 10px 0 0;
-    position: relative;
-    z-index: 2;
+  }
+  .inner {
+    max-width: 95vw;
+    width: 95vw;
+    max-height: 90vh;
+    height: 90vh;
+    border-width: 0px 1px 1px 1px !important;
+    margin: 0px auto;
+    padding: 1vw 1vw 0.5vw 1vw;
+    bottom: 2px;
   }
 }
 
