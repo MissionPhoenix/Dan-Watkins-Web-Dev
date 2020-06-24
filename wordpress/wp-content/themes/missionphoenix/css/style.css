@@ -128,13 +128,13 @@ header .container {
     width: 14vw;
     padding-left: 1.5vw;
     float: right;
-    height: 96vh;
+    height: 95.5vh;
     border-radius: 0 10px 10px 0;
     right: 2vw;
   }
   .front-page, .pages, .posts-page, .post {
-    max-height: 96vh;
-    height: 96vh;
+    max-height: 95.5vh;
+    height: 95.5vh;
     max-width: 83vw;
     width: 83vw;
     border-radius: 10px;
@@ -145,8 +145,8 @@ header .container {
     border-radius: 0px;
   }
   .inner-tab {
-    max-height: 92vh;
-    height: 92vh;
+    max-height: 91.5vh;
+    height: 91.5vh;
     max-width: 83vw;
     width: 83vw;
     border-width: 1px 0px 1px 1px !important;
@@ -165,6 +165,7 @@ LANDSCAPE STYLE
     margin-top: 0vh;
     border-radius: 10px;
     top: 2vh;
+    height: 10vh;
   }
   .navigation {
     margin-bottom: 0;
@@ -176,8 +177,8 @@ LANDSCAPE STYLE
   .front-page, .pages, .posts-page, .post {
     max-width: 97vw;
     width: 97vw;
-    max-height: 90vh;
-    height: 90vh;
+    max-height: 89.5vh;
+    height: 89.5vh;
     border: 1px solid #663300;
     border-radius: 10px 10px 0 0;
   }
@@ -188,8 +189,8 @@ LANDSCAPE STYLE
   .inner-tab {
     max-width: 95vw;
     width: 95vw;
-    max-height: 90vh;
-    height: 90vh;
+    max-height: 89.5vh;
+    height: 89.5vh;
     border-width: 0px 1px 1px 1px !important;
     margin: 0px auto;
     padding: 2.2vw 2vw 0.5vw 2vw;
