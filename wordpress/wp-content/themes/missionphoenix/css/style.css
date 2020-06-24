@@ -27,25 +27,25 @@ header .container {
 /* profile page */
 .author .inner-tab, .page-id-60 .inner-tab {
   background-color: #fff5ba;
-  border: 1px solid #ba9f00;
+  border: 1px solid #ffdf21;
 }
 
 /* portfolio page */
 .page-id-233 .inner-tab {
   background-color: #ace7ff;
-  border: 1px solid #007aac;
+  border: 1px solid #13bbff;
 }
 
 /* posts page */
 .posts-page .inner-tab, .post .inner-tab {
   background-color: #ffa07a;
-  border: 1px solid #7a2300;
+  border: 1px solid #e04000;
 }
 
 /* contact page */
 .page-id-235 .inner-tab {
   background-color: #BFFCC6;
-  border: 1px solid #08b41c;
+  border: 1px solid #2df544;
 }
 
 /* inner-tab layout */
