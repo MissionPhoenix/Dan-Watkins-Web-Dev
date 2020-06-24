@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <div class="container pages">
-    <div class="inner">
+    <div class="inner-tab">
         <div class="paper-stack">
             <div class="paper-sheaf">
                 <?php $dans_profile = get_post(60); ?>
