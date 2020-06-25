@@ -48,10 +48,13 @@ header .container {
   position: relative;
   overflow-y: hidden;
 }
+
 /* Paper-sheaf */
 .paper-sheaf {
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
   background-image: url($paper);
   padding: 0 1rem;
   border: 1px solid lightgrey;
@@ -63,6 +66,10 @@ header .container {
   top: 5px;
   left: 3px;
   transform: rotate(-0.8deg);
+}
+.paper-sheaf::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 .paper-stack {
   background: #fafafa;
@@ -180,6 +187,7 @@ LANDSCAPE STYLE
     height: $landscape-folder-vh;
     border: $folder-border;
     border-radius: 10px 10px 0 0;
+    bottom: 0.3vw;
   }
   .pages, .posts-page, .post {
     border-top: 0px;

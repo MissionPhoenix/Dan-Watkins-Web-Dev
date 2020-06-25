@@ -58,6 +58,10 @@ header .container {
 .paper-sheaf {
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
   background-image: url("/wp-content/uploads/2020/06/groovepaper.png");
   padding: 0 1rem;
   border: 1px solid lightgrey;
@@ -69,6 +73,12 @@ header .container {
   top: 5px;
   left: 3px;
   transform: rotate(-0.8deg);
+}
+
+.paper-sheaf::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .paper-stack {
@@ -181,6 +191,7 @@ LANDSCAPE STYLE
     height: 89.5vh;
     border: 1px solid #663300;
     border-radius: 10px 10px 0 0;
+    bottom: 0.3vw;
   }
   .pages, .posts-page, .post {
     border-top: 0px;
