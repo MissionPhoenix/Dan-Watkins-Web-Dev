@@ -15,13 +15,9 @@ header .container, .front-page, .pages, .posts-page, .post  {
   background-image: url($manila-folder-1);
   border: $folder-border;
   padding: 0;
-  overflow: hidden;
   position: absolute;
-  z-index: 0;
 }
-header, header .container, .menu-top-menu-container {
-  z-index: 2;
-}
+
 
 /* NAV MENU */
 .navigation {
@@ -34,7 +30,6 @@ header, header .container, .menu-top-menu-container {
   justify-content: space-around;
   align-content: start;
   position: relative;
-  z-index: 2;
 }
 .navigation a {
   color: black;
@@ -42,19 +37,20 @@ header, header .container, .menu-top-menu-container {
 }
 .navigation li {
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
-.navigation li.menu-item-260.current_page_item ~ li {
-  z-index: -1;
-}
+//.navigation li.menu-item-260.current_page_item ~ li {
+//  z-index: -1;
+//}
 .navigation li.current_page_item {
-  position: relative;
-  z-index: 2;
+  z-index: 1;
 }
+
 /* FOLDER TABS AND CONTAINERS */
 /* cover tab */
 .menu-item-260 {
   border: $folder-border;
+  background-image: url($manila-folder-1);
 }
 /* profile page and tab */
 .author .inner-tab, .page-id-60 .inner-tab, .menu-item-232 {
@@ -80,6 +76,7 @@ header, header .container, .menu-top-menu-container {
 .inner-tab {
   position: relative;
   overflow-y: hidden;
+  border-width: 1px;
 }
 
 /* Paper-sheaf */
@@ -171,16 +168,17 @@ header, header .container, .menu-top-menu-container {
     flex-direction: column;
     height: $portrait-folder-vh;
     align-items: center;
-    bottom: 2px;
     text-align: center;
+    bottom: 1px;
   }
   .navigation li {
     display: block;
     width: $portrait-folder-vh / 5;
-    max-height: 15vw;
-    height: 13vw;
+    max-height: 9.3vw;
+    height: 9.3vw;
     right: 2vw;
     transform: rotate( 90deg );
+    border-bottom-width: 0px;
   }
   .navigation li a {
     top: 3vw;
@@ -189,12 +187,8 @@ header, header .container, .menu-top-menu-container {
     border-radius: 10px 10px 0px 0px;
   }
   .navigation li:last-child {
-    width: $portrait-folder-vh / 5 - 1.7vh;
-    bottom: 0.9vh;
-  }
-
-  .navigation li.current_page_item {
-    border-left: 0px;
+    width: $portrait-folder-vh / 5 - 1.8vh;
+    bottom: 1vh;
   }
  
   .front-page, .pages, .posts-page, .post {
@@ -215,7 +209,6 @@ header, header .container, .menu-top-menu-container {
     height: $portrait-folder-vh - 4vh; 
     max-width: $portrait-folder-vw;  
     width: 100%;
-    border-width: 1px 0px 1px 1px!important;
     margin: 2vh 0;
     padding: 3vh 2vh 0.5vh 1vh;
   }
@@ -279,7 +272,6 @@ LANDSCAPE STYLE
     width: $landscape-folder-vw - 2vw;
     max-height: 100%;
     height: 100%;
-    border-width: 0px 1px 1px 1px!important;
     margin: 0px auto;
     padding: 2.2vw 2vw 0.5vw 2vw;
     bottom: 2px;
