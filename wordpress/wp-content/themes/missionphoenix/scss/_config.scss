@@ -17,7 +17,7 @@ $pastel-blue:#ace7ff;
 $portrait-folder-vh: 95.5vh;
 $portrait-folder-vw: 83vw;
 $landscape-folder-vw: 97vw;
-$landscape-folder-vh: 89.5vh;
+$landscape-folder-vh: 89vh;
 
 // Borders
 $normal-border: 1px solid #8c8c8c;
@@ -39,23 +39,18 @@ $desktop:1280px; // hi-res laptops and desktops
 
 // Mixins
 // Media query mixins
-@mixin mobile-small {
-    @media (max-width: $mobile-small) {
-        @content;
-    }
-} 
 @mixin mobile {
-    @media (max-width: $mobile) {
+    @media (min-width: $mobile-small) {
         @content;
     }
 } 
 @mixin tablet {
-    @media (max-width: $tablet) {
+    @media (min-width: $mobile) {
         @content;
     }
 }
 @mixin tablet-large {
-    @media (max-width: $laptop - 1px) {
+    @media (min-width: $tablet) {
         @content;
     }
 }
