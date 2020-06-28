@@ -155,7 +155,7 @@ header .container, .front-page, .pages, .posts-page, .post  {
 @media (orientation: portrait) {
   header .container { 
     margin: 0;
-    width: 100vw - $portrait-folder-vw - 4vw;
+    width: 100vw - $portrait-folder-vw - 3.7vw;
   //  padding-left: 1.5vw;
     float: right;
     height: $portrait-folder-vh;
@@ -163,32 +163,37 @@ header .container, .front-page, .pages, .posts-page, .post  {
     right: 2vw;
     top: 2vh;
     border-width: 1px 1px 1px 0px;
+    overflow-y: hidden;
   }
   .navigation {
     flex-direction: column;
     height: $portrait-folder-vh;
     align-items: center;
     text-align: center;
+    margin: 0px;
     bottom: 1px;
   }
+ // @media (min-width: 411px) and (max-width: 416px) {
+ //   .navigation {
+ //   bottom: 0px; 
+ //   }
+ // }
   .navigation li {
     display: block;
     width: $portrait-folder-vh / 5;
-    max-height: 9.3vw;
-    height: 9.3vw;
-    right: 2vw;
+    max-height: 9.5vw;
+    height: 9.5vw;
+    right: 1vw;
     transform: rotate( 90deg );
     border-bottom-width: 0px;
-  }
-  .navigation li a {
-    top: 3vw;
-  }
-  .navigation li {
     border-radius: 10px 10px 0px 0px;
   }
   .navigation li:last-child {
     width: $portrait-folder-vh / 5 - 1.8vh;
-    bottom: 1vh;
+    bottom: 0.9vh;
+  }
+  .navigation li a {
+    top: 2vw;
   }
  
   .front-page, .pages, .posts-page, .post {
@@ -198,8 +203,8 @@ header .container, .front-page, .pages, .posts-page, .post  {
     width: $portrait-folder-vw;   
     border-radius: 10px 0px 0px 10px!important;
     margin: 2vh 0 2vh 2vw;
-    border-right: 1px;
   }
+
   .pages, .posts-page, .post {
     border-right: 0px;
     border-radius: 0px;
@@ -221,9 +226,7 @@ header .container, .front-page, .pages, .posts-page, .post  {
       border-radius: 10px;
       margin: 2vh 0 2vh 2vw;
     }
-    header .container {
-      width: 13vw;
-    }
+
   }
 }
 /* 

@@ -164,48 +164,47 @@ header .container, .front-page, .pages, .posts-page, .post {
 @media (orientation: portrait) {
   header .container {
     margin: 0;
-    width: 13vw;
+    width: 11.3vw;
     float: right;
     height: 95.5vh;
     border-radius: 0 10px 10px 0;
     right: 2vw;
     top: 2vh;
     border-width: 1px 1px 1px 0px;
+    overflow-y: hidden;
   }
   .navigation {
     flex-direction: column;
     height: 95.5vh;
     align-items: center;
     text-align: center;
+    margin: 0px;
     bottom: 1px;
   }
   .navigation li {
     display: block;
     width: 19.1vh;
-    max-height: 9.3vw;
-    height: 9.3vw;
-    right: 2vw;
+    max-height: 9.5vw;
+    height: 9.5vw;
+    right: 1vw;
     transform: rotate(90deg);
     border-bottom-width: 0px;
-  }
-  .navigation li a {
-    top: 3vw;
-  }
-  .navigation li {
     border-radius: 10px 10px 0px 0px;
   }
   .navigation li:last-child {
     width: 17.3vh;
-    bottom: 1vh;
+    bottom: 0.9vh;
+  }
+  .navigation li a {
+    top: 2vw;
   }
   .front-page, .pages, .posts-page, .post {
     max-height: 95.5vh;
     height: 95.5vh;
-    max-width: 83vw;
-    width: 83vw;
+    max-width: 85vw;
+    width: 85vw;
     border-radius: 10px 0px 0px 10px !important;
     margin: 2vh 0 2vh 2vw;
-    border-right: 1px;
   }
   .pages, .posts-page, .post {
     border-right: 0px;
@@ -214,7 +213,7 @@ header .container, .front-page, .pages, .posts-page, .post {
   .inner-tab {
     max-height: 91.5vh;
     height: 91.5vh;
-    max-width: 83vw;
+    max-width: 85vw;
     width: 100%;
     margin: 2vh 0;
     padding: 3vh 2vh 0.5vh 1vh;
@@ -224,13 +223,10 @@ header .container, .front-page, .pages, .posts-page, .post {
 
 @media (orientation: portrait) and (min-width: 480px) {
   .front-page, .pages, .posts-page, .post {
-    max-width: 83vw;
+    max-width: 85vw;
     width: 100%;
     border-radius: 10px;
     margin: 2vh 0 2vh 2vw;
-  }
-  header .container {
-    width: 13vw;
   }
 }
 
