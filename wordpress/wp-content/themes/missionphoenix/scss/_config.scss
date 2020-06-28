@@ -31,36 +31,32 @@ $manila-folder-1: '/wp-content/uploads/2020/06/tan-seamless-paper-textures-3-780
 $paper: '/wp-content/uploads/2020/06/groovepaper.png';
 
 //Media query variables
-$mobile-small:480px; // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
-$mobile: 640px; // portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 
-$tablet: 960px; // tablet, landscape iPad, lo-res laptops ands desktops 
+$mobile:480px; // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+$tablet: 640px; // portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 
+$tablet-large: 960px; // tablet, landscape iPad, lo-res laptops ands desktops 
 $laptop:1024px; // big landscape tablets, laptops, and desktops 
 $desktop:1280px; // hi-res laptops and desktops 
 
 // Mixins
 // Media query mixins
-@mixin mobile {
-    @media (min-width: $mobile-small) {
-        @content;
-    }
-} 
 @mixin tablet {
     @media (min-width: $mobile) {
         @content;
     }
-}
+} 
 @mixin tablet-large {
     @media (min-width: $tablet) {
         @content;
     }
 }
 @mixin laptop {
-    @media (min-width: $laptop) {
+    @media (min-width: $tablet-large) {
         @content;
     }
 }
 @mixin desktop {
-    @media (min-width: $desktop) {
+    @media (min-width: $laptop) {
         @content;
     }
 }
+

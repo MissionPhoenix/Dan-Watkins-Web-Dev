@@ -175,28 +175,29 @@ header .container, .front-page, .pages, .posts-page, .post {
   }
   .navigation {
     flex-direction: column;
-    height: 95.5vh;
+    height: 93.5vh;
     align-items: center;
     text-align: center;
     margin: 0px;
-    bottom: 1px;
+    bottom: 0.2vh;
   }
   .navigation li {
     display: block;
-    width: 19.1vh;
+    width: 18.7vh;
     max-height: 9.5vw;
     height: 9.5vw;
     right: 1vw;
     transform: rotate(90deg);
     border-bottom-width: 0px;
     border-radius: 10px 10px 0px 0px;
+    padding: 1.3vw 0vw;
   }
   .navigation li:last-child {
-    width: 17.3vh;
-    bottom: 0.9vh;
+    width: 18.8vh;
+    top: 0.1vh;
   }
   .navigation li a {
-    top: 2vw;
+    top: 0.2vh;
   }
   .front-page, .pages, .posts-page, .post {
     max-height: 95.5vh;
@@ -227,6 +228,9 @@ header .container, .front-page, .pages, .posts-page, .post {
     width: 100%;
     border-radius: 10px;
     margin: 2vh 0 2vh 2vw;
+  }
+  .navigation li {
+    font-size: 1rem;
   }
 }
 
