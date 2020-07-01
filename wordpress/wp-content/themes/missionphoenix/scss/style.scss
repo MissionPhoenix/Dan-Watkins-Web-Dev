@@ -183,7 +183,7 @@ header .container, .front-page, .pages, .posts-page, .post  {
     transform: rotate( 90deg );
     border-bottom-width: 0px;
     border-radius: 10px 10px 0px 0px;
-    padding: 1.3vw 0vw;
+    padding: 2vw 0vw;
   }
   .navigation li:last-child {
     width: ( $portrait-folder-vh - 1.5vh)/ 5;
@@ -225,7 +225,7 @@ header .container, .front-page, .pages, .posts-page, .post  {
     }
     .navigation li  {
       font-size: 1rem;
-
+      padding: 2.2vw 0vw;
     }
   }
 }
